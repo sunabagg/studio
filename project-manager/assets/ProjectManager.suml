@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<suml fullscreen="true" name="player">
+    <head>
+    </head>
+    <body>
+        <panel
+            fullRect="true"
+            offsetBottom="-10"
+            offsetTop="10"
+            offsetLeft="-10"
+            offsetRight="10"/>
+        <vboxContainer
+            name="vbox"
+            fullRect="true"
+            separation="0">
+            <control 
+                name="menuBarControl"
+                customMinimumSize="0,27">
+                <menuBar
+                    name="menuBar"
+                    fullRect="true"
+                    customMinimumSize="0,27">
+                    <popupMenu
+                        name="File">
+                        <menuItem label="Open" icon="app://icons/16/application--arrow.png"/>
+                        <menuItem label="Exit" icon="app://icons/16/door-open-in.png"/>
+                    </popupMenu>
+                    <popupMenu
+                        name="View">
+                        <menuItem label="Toggle Fullscreen (F11)" icon="app://icons/16/arrow-out.png"/>
+                        <menuItem label="Toggle Menubar (F2)" icon="app://icons/16/application-blue.png"/>
+                    </popupMenu>
+                    <popupMenu
+                        name="Help">
+                        <menuItem label="Sunaba Docs" icon="app://icons/16/book.png"/>
+                        <menuItem label="About" icon="app://icons/16/information-italic.png"/>
+                    </popupMenu>
+                </menuBar>
+            </control>
+            <control 
+                name="gameView"
+                sizeFlagsVertical="3">
+                <subViewportContainer
+                    name="subViewportContainer"
+                    fullRect="true"
+                    stretch="true">
+                    <subViewport
+                        name="subViewport">
+                    </subViewport>
+                </subViewportContainer>
+            </control>
+        </vboxContainer>
+        <acceptDialog
+            name="aboutDialog"
+            title="About">
+        </acceptDialog>
+    </body>
+</suml>
