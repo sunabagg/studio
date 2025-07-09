@@ -1,0 +1,16 @@
+{
+    "name": "studio",
+    "version": "0.7.0",
+    "type": "executable",
+    "rootUrl": "app://",
+    "scriptdir": "src",
+    "assetsdir": "assets",
+    "apisymbols": true,
+    "sourcemap": true,
+    "entrypoint": "Main",
+    "luabin": "main.lua",
+    "libraries": [
+    ],
+    "compilerFlags": [
+    ]
+}
