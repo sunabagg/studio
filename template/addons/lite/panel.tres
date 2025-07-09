@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dmelctufg6fwq"]
+
+[ext_resource type="Texture2D" uid="uid://bc1ntxdls4x1m" path="res://addons/lite/grey_panel.png" id="1"]
+
+[resource]
+texture = ExtResource("1")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(0, 0, 100, 100)

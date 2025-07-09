@@ -1,0 +1,46 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Sunaba Player"
+run/main_scene="res://App.tscn"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/fullsize=false
+boot_splash/image="uid://tqi54djfy3ia"
+config/icon="uid://bcnaj1jhop8y"
+config/macos_native_icon="res://Sunaba-macOS.icns"
+config/windows_native_icon="res://sunaba.ico"
+config/icon.macos="uid://bipasi4ii6raj"
+
+[display]
+
+window/subwindows/embed_subwindows=false
+display_server/driver.linuxbsd="x11"
+
+[dotnet]
+
+project/assembly_name="Sunaba"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sbx_exporter/plugin.cfg")
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true

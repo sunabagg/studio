@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bw2nalo6mrfem"]
+
+[ext_resource type="Texture2D" uid="uid://cwx2gab83rhrd" path="res://addons/lite/focus_button13.png" id="1_wop5e"]
+
+[resource]
+texture = ExtResource("1_wop5e")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0

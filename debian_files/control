@@ -1,0 +1,14 @@
+Package: sunaba-player
+Version: 0.7.0
+Architecture: amd64
+Essential: no
+Priority: optional
+Depends: libluajit-5.1-2, libluajit-5.1-common
+Maintainer: mintkat (sunaba.gg)
+Description: A LuaJIT-based player for the Sunaba game engine.
+ This package contains the player binary and its dependencies.
+ It is designed to run SBX executables written for the Sunaba game engine.
+ The player is built using LuaJIT for performance and compatibility.
+Source: sunaba-player
+Section: games
+Homepage: https://sunaba.gg

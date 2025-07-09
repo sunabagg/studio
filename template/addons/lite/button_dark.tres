@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dblfb66ahi7w8"]
+
+[ext_resource type="Texture2D" uid="uid://da5o3wcp3qgbp" path="res://addons/lite/dark/grey_button13.png" id="1_v4wmd"]
+
+[resource]
+texture = ExtResource("1_v4wmd")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(0, 0, 49, 45)

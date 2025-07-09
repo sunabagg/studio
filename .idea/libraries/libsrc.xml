@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libsrc">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../tsukuru/libsrc" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

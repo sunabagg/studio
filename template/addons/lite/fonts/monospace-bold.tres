@@ -1,0 +1,9 @@
+[gd_resource type="SystemFont" load_steps=3 format=3 uid="uid://c3vqxstg0hg5r"]
+
+[ext_resource type="FontFile" uid="uid://bywnq8f0vcf2w" path="res://addons/lite/fonts/bootstrap-icons.woff" id="1_by3yv"]
+[ext_resource type="SystemFont" uid="uid://2hojgo8tnktx" path="res://addons/lite/fonts/emoji.tres" id="2_4vwau"]
+
+[resource]
+fallbacks = Array[Font]([ExtResource("1_by3yv"), ExtResource("2_4vwau")])
+font_names = PackedStringArray("Consolas", "Monospace")
+font_weight = 600

@@ -1,0 +1,4 @@
+[gd_resource type="SystemFont" format=3 uid="uid://2hojgo8tnktx"]
+
+[resource]
+font_names = PackedStringArray("Noto Color Emoji", "Apple Color Emoji")

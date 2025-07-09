@@ -1,0 +1,5 @@
+--class-path .
+--library sunaba
+--library tsukuru
+--main Main
+--lua main.lua

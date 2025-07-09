@@ -1,0 +1,10 @@
+[gd_resource type="SystemFont" load_steps=4 format=3 uid="uid://dca7seoyu4mff"]
+
+[ext_resource type="FontFile" uid="uid://bluuyqxx16hg3" path="res://addons/lite/fonts/bootstrap-icons.woff2" id="1_kvr7u"]
+[ext_resource type="SystemFont" uid="uid://2hojgo8tnktx" path="res://addons/lite/fonts/emoji.tres" id="2_oph5v"]
+[ext_resource type="SystemFont" uid="uid://bm2qptywwnt6s" path="res://addons/lite/fonts/system.tres" id="3_ro0a2"]
+
+[resource]
+fallbacks = Array[Font]([ExtResource("1_kvr7u"), ExtResource("2_oph5v"), ExtResource("3_ro0a2")])
+font_names = PackedStringArray("Segoe UI", "Noto Sans", "Cantarell", "SF Pro Display", "Lucida Grande", "Tahoma", "Sans-Serif")
+multichannel_signed_distance_field = true

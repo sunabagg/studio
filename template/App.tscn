@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpumc5a8inr52"]
+
+[ext_resource type="Script" uid="uid://k0nk1npisa06" path="res://app.gd" id="1_yna43"]
+[ext_resource type="Environment" uid="uid://c6c7aarlwqbro" path="res://new_environment.tres" id="2_oxmao"]
+
+[node name="App" type="App"]
+script = ExtResource("1_yna43")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_oxmao")

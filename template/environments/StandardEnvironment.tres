@@ -1,0 +1,20 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://c6c7aarlwqbro"]
+
+[ext_resource type="Texture2D" uid="uid://blqmntg584env" path="res://environments/clear_sky.exr" id="1_eobgq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m0xe8"]
+sky_top_color = Color(0.348514, 0.458704, 0.583509, 1)
+sky_horizon_color = Color(0.76863, 0.775811, 0.78715, 1)
+sky_cover = ExtResource("1_eobgq")
+ground_bottom_color = Color(0.177938, 0.173223, 0.174405, 1)
+ground_horizon_color = Color(1, 1, 1, 1)
+ground_curve = 0.0800002
+
+[sub_resource type="Sky" id="Sky_1r1lb"]
+sky_material = SubResource("ProceduralSkyMaterial_m0xe8")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_1r1lb")
+ambient_light_sky_contribution = 0.5
+tonemap_mode = 2

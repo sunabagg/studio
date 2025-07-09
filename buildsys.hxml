@@ -1,0 +1,5 @@
+--class-path buildsystem
+--main Main
+--library tsukuru
+--library hxnodejs
+--js build.js
