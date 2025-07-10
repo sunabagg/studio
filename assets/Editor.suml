@@ -38,9 +38,9 @@
                         <menuItem label="Toggle Fullscreen (F11)" icon="app://icons/16/arrow-out.png"/>
                         <menuItem label="Toggle Menubar (F2)" icon="app://icons/16/application-blue.png"/>
                     </popupMenu>
-                    <popupMenu
+                    <!--popupMenu
                         name="Tools">
-                    </popupMenu>
+                    </popupMenu-->
                     <popupMenu
                         name="Help">
                         <menuItem label="Sunaba Docs" icon="app://icons/16/book.png"/>
