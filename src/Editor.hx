@@ -45,21 +45,15 @@ class Editor extends Widget {
             }
         }
 
-        try {
-            if (snbProjPath != "") {
-                var snbProjPathArray = snbProjPath.split("\\").join("/").split("/");
-                if (snbProjPathArray.length > 0) {
-                    var projectDirectory = snbProjPathArray.slice(0, snbProjPathArray.length - 1).join("/");
-                    trace("Project Directory: " + projectDirectory);
-                    projectTree = new ProjectTree(this);
-                    projectTree.projectDirectory = projectDirectory;
-                    projectTree.init();
-                }
+        if (snbProjPath != "") {
+            var snbProjPathArray = snbProjPath.split("\\").join("/").split("/");
+            if (snbProjPathArray.length > 0) {
+                var projectDirectory = snbProjPathArray.slice(0, snbProjPathArray.length - 1).join("/");
+                trace("Project Directory: " + projectDirectory);
+                projectTree = new ProjectTree(this);
+                projectTree.projectDirectory = projectDirectory;
+                projectTree.init();
             }
-        }
-        catch (e:Dynamic) {
-            trace("Error initializing ProjectTree: " + e);
-            throw e;
         }
     }
 }
