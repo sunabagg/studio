@@ -27,6 +27,11 @@
                     </popupMenu>
                     <popupMenu
                         name="Edit">
+                        <menuItem label="Undo" icon="app://icons/16/arrow-curve-180-left.png"/>
+                        <menuItem label="Redo" icon="app://icons/16/arrow-curve.png"/>
+                        <menuItem label="Cut" icon="app://icons/16/scissors.png"/>
+                        <menuItem label="Copy" icon="app://icons/16/document-copy.png"/>
+                        <menuItem label="Paste" icon="app://icons/16/clipboard.png"/>
                     </popupMenu>
                     <popupMenu
                         name="View">
@@ -51,17 +56,22 @@
                     fullRect="true">
                     <hboxContainer
                         name="hbox"
-                        fullRect="true">
+                        fullRect="true"
+                        separation="0">
                         <hboxContainer
                             name="leftToolbar"
-                            fullRect="true">
+                            fullRect="true"
+                            separation="0">
+                            <button name="newFile" flat="true" icon="app://icons/16/document--plus.png" customMinimumSize="30,30"/>
+                            <button name="openFile" flat="true" icon="app://icons/16/blue-folder-open-document.png" customMinimumSize="30,30"/>
                             <button name="saveFile" flat="true" icon="app://icons/16/disk.png" customMinimumSize="30,30"/>
                         </hboxContainer>
                         <control name="separator" sizeFlagsHorizontal="3"/>
                         <hboxContainer
                             name="rightToolbar"
                             fullRect="true"
-                            alignment="2">
+                            alignment="2"
+                            separation="0">
                             <button name="play" flat="true" icon="app://icons/16/control.png" customMinimumSize="30,30"/>
                             <button name="pause" flat="true" icon="app://icons/16/control-pause.png" customMinimumSize="30,30"/>
                             <button name="stop" flat="true" icon="app://icons/16/control-stop-square.png" customMinimumSize="30,30"/>
@@ -76,6 +86,29 @@
                 <control
                     name="treeView"
                     customMinimumSize="175,0">
+                    <vboxContainer
+                        name="vbox"
+                        fullRect="true"
+                        separation="0">
+                        <control
+                            name="toolbar"
+                            customMinimumSize="30,30">
+                            <hboxContainer
+                                name="hbox"
+                                fullRect="true"
+                                separation="0">
+                                <control
+                                    customMinimumSize="5,5"/>
+                                <label
+                                    text="Project"/>
+                                <control name="separator" sizeFlagsHorizontal="3"/>
+                                <button name="newButton" flat="true" icon="app://icons/16/plus-button.png" customMinimumSize="30,30"/>
+                            </hboxContainer>
+                        </control>
+                        <tree
+                            name="tree"
+                            sizeFlagsVertical="3"/>
+                    </vboxContainer>
                 </control>
                 <tabContainer
                     name="workspace"
