@@ -14,10 +14,10 @@
             fullRect="true"
             separation="0">
             <control 
-                name="toolBar"
+                name="toolbar"
                 customMinimumSize="0,27">
                 <hboxContainer
-                    name="hboxContainer">
+                    name="hbox">
                     <!--control name="spacer" customMinimumSize="5,5"/-->
                     <button name="openProjectButton" text="Open Project" icon="app://icons/16/blue-folder--arrow.png"/>
                 </hboxContainer>
