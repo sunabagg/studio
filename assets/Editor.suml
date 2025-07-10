@@ -104,7 +104,7 @@
                                 <label
                                     text="Project"/>
                                 <control name="separator" sizeFlagsHorizontal="3"/>
-                                <button name="newButton" flat="true" icon="app://icons/16/plus-button.png" customMinimumSize="30,30"/>
+                                <menuButton name="newButton" flat="true" icon="app://icons/16/plus-button.png" customMinimumSize="30,30"/>
                             </hboxContainer>
                         </control>
                         <tree
