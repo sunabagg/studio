@@ -73,7 +73,9 @@ ${If} ${RunningX64}
   File "bin\windows-amd64-debug\msvcp140.dll"
   File "bin\windows-amd64-debug\vcruntime140.dll"
   File "bin\windows-amd64-debug\mobdebug.lua"
-  File "bin\windows-amd64-debug\studio.sbx"
+  File "bin\windows-amd64-release\player.sbx"
+  File "bin\windows-amd64-release\editor.sbx"
+  File "bin\windows-amd64-release\project-manager.sbx"
 
   ; Associate .snbproj files with SunabaStudio.exe (per-user)
   WriteRegStr HKCU "Software\Classes\.snbproj" "" "Sunaba.Project"
@@ -128,7 +130,9 @@ Section Uninstall
   !insertmacro MUI_STARTMENU_GETFOLDER "Application" $ICONS_GROUP
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
-  Delete "$INSTDIR\studio.sbx"
+  Delete "$INSTDIR\editor.sbx"
+  Delete "$INSTDIR\player.sbx"
+  Delete "$INSTDIR\project-manager.sbx"
   Delete "$INSTDIR\mobdebug.lua"
   Delete "$INSTDIR\vcruntime140.dll"
   Delete "$INSTDIR\msvcp140.dll"
