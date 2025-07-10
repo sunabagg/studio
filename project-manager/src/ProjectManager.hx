@@ -23,6 +23,7 @@ import sunaba.WindowMode;
 import sunaba.core.Element;
 import sunaba.desktop.Window;
 import sunaba.ui.Button;
+import sys.FileSystem;
 
 class ProjectManager extends Widget {
     override function init() {
@@ -51,7 +52,29 @@ class ProjectManager extends Widget {
     }
 
     function openProject(path: String) {
-        var programPath = Sys.programPath();
-        trace(programPath);
+        var editorBinPath = App.execDir + "/editor.sbx";
+        if (PlatformService.hasFeature("editor")) {
+            editorBinPath = App.resDir + "/editor.sbx";
+        }
+        else if (FileSystem.exists(App.shareDir + "/editor.sbx")) {
+            editorBinPath = App.shareDir + "/editor.sbx";
+        }
+
+        var window = new Window();
+        rootElement.addChild(window);
+        window.hide();
+        window.title = "Sunaba Studio";
+        window.size = rootElement.getWindow().size;
+        window.closeRequested.connect((args: ArrayList) -> {
+             window.delete();
+        });
+
+        var runtime = new Runtime();
+        runtime.args.add(path);
+        runtime.init(false);
+        window.addChild(runtime);
+        runtime.load(editorBinPath);
+
+        window.popupCentered(rootElement.getWindow().size);
     }
 }
