@@ -43,6 +43,23 @@
                     </popupMenu>
                 </menuBar>
             </control>
+            <control
+                name="toolbar"
+                customMinimumSize="0,30">
+                <control
+                    name="control"
+                    fullRect="true">
+                    <hboxContainer
+                        name="leftToolbar"
+                        fullRect="true">
+                        <button name="saveFile" flat="true" icon="app://icons/16/disk.png" customMinimumSize="30,30"/>
+                        <control name="separator" sizeFlagsHorizontal="3"/>
+                        <button name="play" flat="true" icon="app://icons/16/control.png" customMinimumSize="30,30"/>
+                        <button name="pause" flat="true" icon="app://icons/16/control-pause.png" customMinimumSize="30,30"/>
+                        <button name="stop" flat="true" icon="app://icons/16/control-stop-square.png" customMinimumSize="30,30"/>
+                    </hboxContainer>
+                </control>
+            </control>
             <control 
                 name="gameView"
                 sizeFlagsVertical="3">
