@@ -26,9 +26,15 @@
                         <menuItem label="Exit" icon="app://icons/16/door-open-in.png"/>
                     </popupMenu>
                     <popupMenu
+                        name="Edit">
+                    </popupMenu>
+                    <popupMenu
                         name="View">
                         <menuItem label="Toggle Fullscreen (F11)" icon="app://icons/16/arrow-out.png"/>
                         <menuItem label="Toggle Menubar (F2)" icon="app://icons/16/application-blue.png"/>
+                    </popupMenu>
+                    <popupMenu
+                        name="Tools">
                     </popupMenu>
                     <popupMenu
                         name="Help">

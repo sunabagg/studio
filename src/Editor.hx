@@ -26,5 +26,6 @@ import sunaba.desktop.Window;
 class Editor extends Widget {
     override function init() {
         load("app://Editor.suml");
+
     }
 }
