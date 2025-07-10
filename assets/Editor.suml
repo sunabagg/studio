@@ -50,13 +50,22 @@
                     name="control"
                     fullRect="true">
                     <hboxContainer
-                        name="leftToolbar"
+                        name="hbox"
                         fullRect="true">
-                        <button name="saveFile" flat="true" icon="app://icons/16/disk.png" customMinimumSize="30,30"/>
+                        <hboxContainer
+                            name="leftToolbar"
+                            fullRect="true">
+                            <button name="saveFile" flat="true" icon="app://icons/16/disk.png" customMinimumSize="30,30"/>
+                        </hboxContainer>
                         <control name="separator" sizeFlagsHorizontal="3"/>
-                        <button name="play" flat="true" icon="app://icons/16/control.png" customMinimumSize="30,30"/>
-                        <button name="pause" flat="true" icon="app://icons/16/control-pause.png" customMinimumSize="30,30"/>
-                        <button name="stop" flat="true" icon="app://icons/16/control-stop-square.png" customMinimumSize="30,30"/>
+                        <hboxContainer
+                            name="rightToolbar"
+                            fullRect="true"
+                            alignment="2">
+                            <button name="play" flat="true" icon="app://icons/16/control.png" customMinimumSize="30,30"/>
+                            <button name="pause" flat="true" icon="app://icons/16/control-pause.png" customMinimumSize="30,30"/>
+                            <button name="stop" flat="true" icon="app://icons/16/control-stop-square.png" customMinimumSize="30,30"/>
+                        </hboxContainer>
                     </hboxContainer>
                 </control>
             </control>
