@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Sunaba Studio
+GenericName=IDE
+Icon=sunaba
+Comment=A IDE for the Sunaba platform
+Exec=/usr/bin/sunaba-studio
+Terminal=false
+Type=Application
+Categories=Application;Development;
