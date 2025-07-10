@@ -10,6 +10,15 @@ func _init() -> void:
 		theme = load("res://addons/lite/light.tres")
 	set_theme(theme)
 	args = OS.get_cmdline_args()
+	var loadsbx = false
+	var loadsnbproj = false
+	for arg in args:
+		if (arg.ends_with(".sbx")):
+			loadsbx = true
+			break
+		elif (arg.ends_with(".snbproj")):
+			loadsnbproj = true
+			break
 	var root_path : String = ProjectSettings.globalize_path("res://")
 	if (!OS.has_feature("editor")):
 		root_path = OS.get_executable_path().get_base_dir()
@@ -24,7 +33,11 @@ func _init() -> void:
 	if not root_path.ends_with("/"):
 		root_path += "/"
 	
-	var sbx_path := root_path + "player.sbx"
+	var sbx_path := root_path + "project-manager.sbx"
+	if (loadsbx):
+		sbx_path = root_path + "player.sbx"
+	elif (loadsnbproj):
+		sbx_path = root_path + "editor.sbx"
 	
 	load_and_execute_sbx(sbx_path)
 	on_exit.connect(func():
