@@ -1,0 +1,10 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://bbb2dpjqy6kus"]
+
+[ext_resource type="FontFile" uid="uid://da2hp8o1g5xf4" path="res://addons/godwaita/fonts/AdwaitaSans-Italic.ttf" id="1_1kmej"]
+
+[resource]
+base_font = ExtResource("1_1kmej")
+variation_opentype = {
+1869640570: 14,
+2003265652: 600
+}
