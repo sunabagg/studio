@@ -19,7 +19,7 @@
                 <hboxContainer
                     name="hbox">
                     <!--control name="spacer" customMinimumSize="5,5"/-->
-                    <button name="openProjectButton" text="Open Project" icon="app://icons/16/blue-folder--arrow.png"/>
+                    <button name="openProjectButton" text="Open Project" flat="true" icon="app://icons/16/blue-folder--arrow.png"/>
                 </hboxContainer>
             </control>
         </vboxContainer>
