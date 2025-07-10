@@ -18,10 +18,10 @@ class Main {
 
         if (args[0] == "-h" || args[0] == "--help") {
             Sys.println("Usage: node build [run|export] [--godot-command=<command>] [--target=<platform>] [-debug|-release]");
-            Sys.println("  run: Run the Sunaba Player");
+            Sys.println("  run: Run Sunaba Studio");
             Sys.println("  --godot-command=<command>: Specify the Godot command to use (default: godot)");
             Sys.println("  --skip: Skip the build step");
-            Sys.println("  export: Export the Sunaba Player for the specified platform");
+            Sys.println("  export: Export Sunaba Studio for the specified platform");
             Sys.println("  --skip -s: Skip the build step");
             Sys.println("  --godot-command=<command>: Specify the Godot command to use (default: godot)");
             Sys.println("  --target=<platform> -t=<platform>: Specify the target platform (default: auto-detect based on OS)");
@@ -106,10 +106,33 @@ class Main {
             }
         }
 
+        if (!FileSystem.exists(currentDir + "/player/player.snbproj")) {
+            Sys.println("ERROR: The player submodule was not downloaded. Please update submodules: git submodule update --init --recursive.");
+            Sys.exit(2);
+            return;
+        }
+
         var tsukuru = new Tsukuru();
         tsukuru.zipOutputPath = currentDir + "template/player.sbx";
         if (!skipBuild) {
-            tsukuru.build(currentDir + "player.snbproj");
+            tsukuru.build(currentDir + "/player/player.snbproj");
+        }
+        else {
+            Sys.println("Skipping build step.");
+        }
+        var tsukuru2 = new Tsukuru();
+        tsukuru2.zipOutputPath = currentDir + "template/editor.sbx";
+        if (!skipBuild) {
+            tsukuru2.build(currentDir + "/studio.snbproj");
+        }
+        else {
+            Sys.println("Skipping build step.");
+        }
+
+        var tsukuru3 = new Tsukuru();
+        tsukuru3.zipOutputPath = currentDir + "template/project-manager.sbx";
+        if (!skipBuild) {
+            tsukuru3.build(currentDir + "/project-manager/project-manager.snbproj");
         }
         else {
             Sys.println("Skipping build step.");
@@ -154,13 +177,13 @@ class Main {
             }
         }
         if (targetPlatform == "mac-universal") {
-            targetName = "Sunaba Player.app";
+            targetName = "Sunaba Studio.app";
         }
         else if (targetPlatform == "windows-amd64") {
-            targetName = "SunabaPlayer.exe";
+            targetName = "SunabaStudio.exe";
         }
         else if (targetPlatform == "linux-amd64") {
-            targetName = "sunaba-player";
+            targetName = "sunaba-studio";
         }
         else {
             Sys.println("Invalid target: " + targetPlatform);
@@ -211,7 +234,7 @@ class Main {
             }
         }
 
-        var outputInstallerPath = Sys.getCwd() + "bin/" + targetPlatform + "-" + exportType + "-nsis/SunabaPlayerInstaller.exe";
+        var outputInstallerPath = Sys.getCwd() + "bin/" + targetPlatform + "-" + exportType + "-nsis/";
 
         if (!FileSystem.exists(Sys.getCwd() + "/bin/" + targetPlatform + "-" + exportType + "-nsis")) {
             FileSystem.createDirectory(Sys.getCwd() + "/bin/" + targetPlatform + "-" + exportType + "-nsis");
@@ -245,7 +268,7 @@ class Main {
             FileSystem.createDirectory(debRootPath);
         }
 
-        var debPackagePath = debRootPath + "sunaba-player-" + exportType + "/";
+        var debPackagePath = debRootPath + "sunaba-studio-" + exportType + "/";
         if (!FileSystem.exists(debPackagePath)) {
             FileSystem.createDirectory(debPackagePath);
         }
@@ -281,7 +304,7 @@ class Main {
             FileSystem.createDirectory(debOutputPath);
         }
 
-        var debPackageName = "sunaba-player-" + exportType + ".deb";
+        var debPackageName = "sunaba-studio-" + exportType + ".deb";
 
         File.copy(debRootPath + debPackageName, debOutputPath + debPackageName);
     }
@@ -324,7 +347,7 @@ class Main {
             FileSystem.createDirectory(sharePixmapsPath);
         }
 
-        var executableName = "sunaba-player";
+        var executableName = "sunaba-studio";
         File.copy(exportPath + executableName, binPath + executableName);
 
         var libraryName = "libsunaba.so";
@@ -334,17 +357,19 @@ class Main {
         File.copy(exportPath + libraryName, libPath + libraryName);
 
         File.copy(exportPath + "player.sbx", shareSunabaPath + "player.sbx");
+        File.copy(exportPath + "project-manager.sbx", shareSunabaPath + "project-manager.sbx");
+        File.copy(exportPath + "editor.sbx", shareSunabaPath + "editor.sbx");
         File.copy(exportPath + "mobdebug.lua", shareSunabaPath + "mobdebug.lua");
-        File.copy(cwd + "sunaba-player.desktop", shareApplicationsPath + "sunaba-player.desktop");
+        File.copy(cwd + "sunaba-studio.desktop", shareApplicationsPath + "sunaba-player.desktop");
         File.copy(cwd + "sunaba.png", sharePixmapsPath + "sunaba.png");
     }
 
     public static function exportDmg() {
         var applicationsFolder = "/Applications/";
         Sys.command("ln -s /Applications/ " + Sys.getCwd() + "/bin/" + targetPlatform + "-" + exportType + "/Applications");
-        Sys.command("hdiutil create -volname 'Sunaba Player' -srcfolder 'bin/" + targetPlatform + "-" + exportType + "' -ov -format UDZO 'bin/sunaba-player-" + exportType + ".dmg'");
-        Sys.println("DMG package created at: bin/sunaba-player-" + exportType + ".dmg");
-        var dmgPath = Sys.getCwd() + "bin/sunaba-player-" + exportType + ".dmg";
+        Sys.command("hdiutil create -volname 'Sunaba Studio' -srcfolder 'bin/" + targetPlatform + "-" + exportType + "' -ov -format UDZO 'bin/sunaba-studio-" + exportType + ".dmg'");
+        Sys.println("DMG package created at: bin/sunaba-studio-" + exportType + ".dmg");
+        var dmgPath = Sys.getCwd() + "bin/sunaba-studio-" + exportType + ".dmg";
         if (!FileSystem.exists(dmgPath)) {
             Sys.println("DMG package creation failed.");
             Sys.exit(-1);
