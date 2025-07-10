@@ -24,6 +24,7 @@ import sunaba.core.Element;
 import sunaba.desktop.Window;
 import sunaba.ui.Button;
 import sys.FileSystem;
+import lua.Table;
 
 class ProjectManager extends Widget {
     override function init() {
@@ -70,7 +71,9 @@ class ProjectManager extends Widget {
         });
 
         var runtime = new Runtime();
-        runtime.args.add(path);
+        var args = runtime.args;
+        args.add(path);
+        runtime.args = args;
         runtime.init(false);
         window.addChild(runtime);
         runtime.load(editorBinPath);
