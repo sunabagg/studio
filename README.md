@@ -1,6 +1,6 @@
-# Sunaba Player
+# Sunaba Studio
 
-Frontend for the Sunaba platform 
+IDE for the Sunaba platform
 
 ## Build Instructions
 
