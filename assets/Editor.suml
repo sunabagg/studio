@@ -22,7 +22,9 @@
                     customMinimumSize="0,27">
                     <popupMenu
                         name="File">
-                        <menuItem label="Open" icon="app://icons/16/application--arrow.png"/>
+                        <menuItem label="New File" icon="app://icons/16/document--plus.png"/>
+                        <menuItem label="Open File" icon="app://icons/16/blue-folder-open-document.png"/>
+                        <menuItem label="Save File" icon="app://icons/16/disk.png"/>
                         <menuItem label="Exit" icon="app://icons/16/door-open-in.png"/>
                     </popupMenu>
                     <popupMenu
@@ -31,7 +33,7 @@
                         <menuItem label="Redo" icon="app://icons/16/arrow-curve.png"/>
                         <menuItem label="Cut" icon="app://icons/16/scissors.png"/>
                         <menuItem label="Copy" icon="app://icons/16/document-copy.png"/>
-                        <menuItem label="Paste" icon="app://icons/16/clipboard.png"/>
+                        <menuItem label="Paste" icon="app://icons/16/clipboard-paste.png"/>
                     </popupMenu>
                     <popupMenu
                         name="View">
