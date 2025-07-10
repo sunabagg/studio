@@ -36,7 +36,7 @@ class Editor extends Widget {
         if (PlatformService.osName == "macOS") {
             menuBarControl.customMinimumSize = new Vector2(0, 0);
         }
-        
+
         var args = Sys.args();
         for (arg in args) {
             if (StringTools.endsWith(arg, ".snbproj")) {

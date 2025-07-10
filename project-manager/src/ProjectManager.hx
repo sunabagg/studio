@@ -79,5 +79,6 @@ class ProjectManager extends Widget {
         runtime.load(editorBinPath);
 
         window.popupCentered(rootElement.getWindow().size);
+        window.mode = WindowMode.maximized;
     }
 }
