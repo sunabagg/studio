@@ -14,40 +14,13 @@
             fullRect="true"
             separation="0">
             <control 
-                name="menuBarControl"
+                name="toolBar"
                 customMinimumSize="0,27">
-                <menuBar
-                    name="menuBar"
-                    fullRect="true"
-                    customMinimumSize="0,27">
-                    <popupMenu
-                        name="File">
-                        <menuItem label="Open" icon="app://icons/16/application--arrow.png"/>
-                        <menuItem label="Exit" icon="app://icons/16/door-open-in.png"/>
-                    </popupMenu>
-                    <popupMenu
-                        name="View">
-                        <menuItem label="Toggle Fullscreen (F11)" icon="app://icons/16/arrow-out.png"/>
-                        <menuItem label="Toggle Menubar (F2)" icon="app://icons/16/application-blue.png"/>
-                    </popupMenu>
-                    <popupMenu
-                        name="Help">
-                        <menuItem label="Sunaba Docs" icon="app://icons/16/book.png"/>
-                        <menuItem label="About" icon="app://icons/16/information-italic.png"/>
-                    </popupMenu>
-                </menuBar>
-            </control>
-            <control 
-                name="gameView"
-                sizeFlagsVertical="3">
-                <subViewportContainer
-                    name="subViewportContainer"
-                    fullRect="true"
-                    stretch="true">
-                    <subViewport
-                        name="subViewport">
-                    </subViewport>
-                </subViewportContainer>
+                <hboxContainer
+                    name="hboxContainer">
+                    <!--control name="spacer" customMinimumSize="5,5"/-->
+                    <button name="openProjectButton" text="Open Project" icon="app://icons/16/blue-folder--arrow.png"/>
+                </hboxContainer>
             </control>
         </vboxContainer>
         <acceptDialog
