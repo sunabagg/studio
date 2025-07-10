@@ -69,18 +69,19 @@
                     </hboxContainer>
                 </control>
             </control>
-            <control 
-                name="gameView"
-                sizeFlagsVertical="3">
-                <subViewportContainer
-                    name="subViewportContainer"
-                    fullRect="true"
-                    stretch="true">
-                    <subViewport
-                        name="subViewport">
-                    </subViewport>
-                </subViewportContainer>
-            </control>
+            <hsplitContainer
+                name="hsplitContainer"
+                sizeFlagsVertical="3"
+                splitOffset="100">
+                <control
+                    name="treeView"
+                    customMinimumSize="175,0">
+                </control>
+                <tabContainer
+                    name="workspace"
+                    sizeFlagsVertical="3">
+                </tabContainer>
+            </hsplitContainer>
         </vboxContainer>
         <acceptDialog
             name="aboutDialog"
