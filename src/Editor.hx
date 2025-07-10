@@ -27,5 +27,9 @@ class Editor extends Widget {
     override function init() {
         load("app://Editor.suml");
 
+        var menuBarControl: Control = Control.toControl(rootElement.find(("vbox/menuBarControl")));
+        if (PlatformService.osName == "macOS") {
+            menuBarControl.customMinimumSize = new Vector2(0, 0);
+        }
     }
 }
