@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>studio</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.haxe4e.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.haxe4e.project.nature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>!!!haxestdlib</name>
+			<type>2</type>
+			<location>//C:/HaxeToolkit/haxe/std/</location>
+		</link>
+		<link>
+			<name>!!haxedeps</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
