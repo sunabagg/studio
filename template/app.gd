@@ -33,11 +33,11 @@ func _init() -> void:
 	if not root_path.ends_with("/"):
 		root_path += "/"
 	
-	var sbx_path := root_path + "project-manager.sbx"
+	var sbx_path := root_path + "editor.sbx"
 	if (loadsbx):
 		sbx_path = root_path + "player.sbx"
-	elif (loadsnbproj):
-		sbx_path = root_path + "editor.sbx"
+	#elif (loadsnbproj):
+	#	sbx_path = root_path + "editor.sbx"
 	
 	load_and_execute_sbx(sbx_path)
 	on_exit.connect(func():

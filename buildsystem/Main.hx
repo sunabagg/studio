@@ -126,9 +126,9 @@ class Main {
             tsukuru2.build(currentDir + "/studio.snbproj");
         }
         else {
-            Sys.println("Skipping build step.");
         }
 
+        /*
         var tsukuru3 = new Tsukuru();
         tsukuru3.zipOutputPath = currentDir + "template/project-manager.sbx";
         if (!skipBuild) {
@@ -136,7 +136,7 @@ class Main {
         }
         else {
             Sys.println("Skipping build step.");
-        }
+        }*/
 
 
         if (args[0] == "run") {

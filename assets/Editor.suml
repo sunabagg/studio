@@ -22,8 +22,8 @@
                     customMinimumSize="0,27">
                     <popupMenu
                         name="File">
-                        <menuItem label="New File" icon="app://icons/16/document--plus.png"/>
-                        <menuItem label="Open File" icon="app://icons/16/blue-folder-open-document.png"/>
+                        <menuItem label="New Project" icon="app://icons/16/blue-folder--plus.png"/>
+                        <menuItem label="Open Project" icon="app://icons/16/blue-folder-open-document.png"/>
                         <menuItem label="Save File" icon="app://icons/16/disk.png"/>
                         <menuItem label="Exit" icon="app://icons/16/door-open-in.png"/>
                     </popupMenu>
@@ -64,7 +64,7 @@
                             name="leftToolbar"
                             fullRect="true"
                             separation="0">
-                            <button name="newFile" flat="true" icon="app://icons/16/document--plus.png" customMinimumSize="30,30"/>
+                            <button name="newProject" flat="true" icon="app://icons/16/blue-folder--plus.png" customMinimumSize="30,30"/>
                             <button name="openFile" flat="true" icon="app://icons/16/blue-folder-open-document.png" customMinimumSize="30,30"/>
                             <button name="saveFile" flat="true" icon="app://icons/16/disk.png" customMinimumSize="30,30"/>
                         </hboxContainer>
@@ -87,7 +87,7 @@
                 splitOffset="100">
                 <control
                     name="treeView"
-                    customMinimumSize="175,0">
+                    customMinimumSize="200,0">
                     <vboxContainer
                         name="vbox"
                         fullRect="true"
